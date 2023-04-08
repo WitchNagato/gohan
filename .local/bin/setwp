@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# Location of link to wallpaper link.
+wploc="${XDG_DATA_HOME:-$HOME/.local/share}/wp.png"
+
+[ -f "$1" ] && cp "$1" "$wploc"
+
+xwallpaper --zoom "$wploc"
